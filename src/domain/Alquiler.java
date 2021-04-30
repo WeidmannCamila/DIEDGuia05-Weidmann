@@ -39,6 +39,16 @@ public class Alquiler implements Contratable {
 
     }
 
-
+    public Boolean enMora() {
+        try {
+            if(Duration.between(fechaInicio, fechaDevolucion).toDays() > 0)
+                return true;
+            return false;
+        } catch (NullPointerException e) {
+            if(Duration.between(fechaFin, Instant.now()).toDays() > 0 )
+                return true;
+            return false;
+        }
+    }
 
 }
