@@ -7,7 +7,9 @@ public class Oficio {
     public Oficio(String n) {
         this.nombre = n;
     }
-
+    public String getNombre() {
+        return this.nombre;
+    }
     public boolean isEqualsTo(Object o) {
         boolean resultado = false;
 
